@@ -1,6 +1,6 @@
-# 🚀 Smart Job Tracker Dashboard
+ 🚀 Smart Job Tracker Dashboard
 
-A production-grade React SaaS dashboard to track job applications — built with real API calls, full CRUD, analytics, and a clean dark UI.
+A production-grade React SaaS dashboard to track job applications — built with real API calls, full CRUD, analytics.
 
 ---
 
