@@ -1,0 +1,96 @@
+.dashboard { animation: fadeUp .4s ease; }
+
+.stat-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 6px;
+}
+.stat-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.dashboard-charts {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+@media (max-width: 900px) { .dashboard-charts { grid-template-columns: 1fr; } }
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 900px) { .dashboard-bottom { grid-template-columns: 1fr; } }
+
+.card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dashboard-error {
+  background: rgba(239,68,68,.1);
+  border: 1px solid rgba(239,68,68,.25);
+  color: #f87171;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Recent list */
+.recent-list { display: flex; flex-direction: column; gap: 4px; }
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background .15s;
+}
+.recent-item:hover { background: var(--bg-hover); }
+.recent-info { flex: 1; min-width: 0; }
+.recent-company { font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.recent-role    { font-size: 12px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.recent-right   { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+.recent-date    { font-size: 11px; color: var(--text-muted); }
+
+/* Interview list */
+.interview-list { display: flex; flex-direction: column; gap: 10px; }
+.interview-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.interview-date-box {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  background: rgba(59,130,246,.1);
+  border: 1px solid rgba(59,130,246,.2);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.interview-day   { font-size: 18px; font-weight: 800; color: var(--accent-blue); line-height: 1; }
+.interview-month { font-size: 9px;  font-weight: 700; color: var(--accent-blue); text-transform: uppercase; }
+.interview-info  { flex: 1; min-width: 0; }
+.interview-company { font-size: 14px; font-weight: 700; }
+.interview-role    { font-size: 12px; color: var(--text-secondary); }
+.interview-salary  { font-size: 13px; font-weight: 700; color: var(--accent-green); font-family: var(--font-mono); flex-shrink: 0; }

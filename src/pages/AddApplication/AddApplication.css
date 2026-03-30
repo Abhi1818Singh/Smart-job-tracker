@@ -1,0 +1,44 @@
+.add-app-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 900px) { .add-app-layout { grid-template-columns: 1fr; } }
+
+.add-app-form { display: flex; flex-direction: column; gap: 18px; }
+
+.add-app-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.back-btn { font-size: 13px; padding: 7px 14px; }
+
+/* Tips */
+.add-app-tips { padding: 22px; }
+.tips-title { font-size: 14px; font-weight: 800; margin-bottom: 14px; }
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.tips-list li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+.tips-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
